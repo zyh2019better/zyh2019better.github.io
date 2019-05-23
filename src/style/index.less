@@ -1,0 +1,108 @@
+/*引入默认样式*/
+@import (inline) "common/base.css";
+
+body {
+  position: relative;
+}
+.header {
+  height: 44px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  line-height: 44px;
+  text-align: center;
+  background-color: #e93b3d;
+  .left,.right {
+    width: 52px;
+    height: 100%;
+    a {
+      color: #fff;
+      font-size: 16px;
+    }
+    .iconfont {
+      color: #fff;
+      font-size: 22px;
+    }
+  }
+  .center {
+    flex: 1;
+    background-color: #fff;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    .iconfont {
+      padding: 0 6px;
+    }
+    .icon-jingdong {
+      margin-left: 10px;
+      color: #e93b3d;
+      position: relative;
+      font-size: 20px;
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 7px;
+        width: 1px;
+        height: 16px;
+        background-color: #ccc;
+      }
+    }
+    .icon-sousuo {
+      color: #ccc;
+      font-size: 18px;
+    }
+    input {
+      height: 100%;
+      text-indent: 5px;
+      flex: 1;
+      color: #000;
+    }
+  }
+}
+
+.content {
+  height: 400px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+.footer {
+  height: 44px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: yellow;
+  ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    li {
+      flex: 1;
+      text-align: center;
+      &.active a{
+        color: #e93b3d;
+      }
+      .iconfont {
+        font-size: 20px;
+      }
+      a {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 12px;
+        transform: scale(0.89);
+      }
+    }
+  }
+}

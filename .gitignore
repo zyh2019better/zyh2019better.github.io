@@ -5,3 +5,4 @@ dist
 build
 ._*
 .DS_Store
+test

@@ -45,13 +45,13 @@ var slogan = document.querySelector('.slogan');
 var sloganSpan = slogan.children;
 var sloganLength = sloganSpan.length;
 //初始化图片和指示点
-function ininImgs(){
+function initImgs(){
     var cloneFirst = imgs[0].cloneNode(true);
     var cloneLast = imgs[oImgsLength-1].cloneNode(true);
     wrapper.appendChild(cloneFirst);
     wrapper.insertBefore(cloneLast,imgs[0])
 }
-ininImgs();
+initImgs();
 
 function initPoints() {
     for (var i = 0; i < oImgsLength ; i++) {
@@ -78,13 +78,13 @@ function autoplay(){
 }
 autoplay()
 
-function ininSlogan(){
+function initSlogan(){
     var cloneFirst = sloganSpan[0].cloneNode(true);
-    var cloneLast = sloganSpan[sloganLength-1].cloneNode(true);
+    // var cloneLast = sloganSpan[sloganLength-1].cloneNode(true);
     slogan.appendChild(cloneFirst);
-    slogan.insertBefore(cloneLast,sloganSpan[0])
+    // slogan.insertBefore(cloneLast,sloganSpan[0])
 }
-ininSlogan();
+initSlogan();
 
 function sloganMove() {
     if(sloganNumber > sloganLength){

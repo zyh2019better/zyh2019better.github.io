@@ -15,5 +15,8 @@ document.addEventListener('DOMContentLoaded',function () {
 
          }
     })()
-
+    new JDSwiper({
+        ele : '.banner-swiper',
+    }).init()
 },false)
+

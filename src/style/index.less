@@ -1,70 +1,14 @@
 /*引入默认样式*/
 @import (inline) "common/base.css";
 @import (reference)"common/swiper.less";
+@import (reference)"common/header.less";
+@import (reference)"common/footer.less";
 body {
   position: relative;
 }
+
 .header {
-  height: 44px;
-  width: 100%;
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  line-height: 44px;
-  text-align: center;
-  .left,.right {
-    width: 52px;
-    height: 100%;
-    a {
-      color: #fff;
-      font-size: 16px;
-    }
-    .iconfont {
-      color: #fff;
-      font-size: 22px;
-    }
-  }
-  .center {
-    flex: 1;
-    background-color: #fff;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 30px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    .iconfont {
-      padding: 0 6px;
-    }
-    .icon-jingdong {
-      margin-left: 10px;
-      color: #e93b3d;
-      position: relative;
-      font-size: 20px;
-      &::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        top: 7px;
-        width: 1px;
-        height: 16px;
-        background-color: #ccc;
-      }
-    }
-    .icon-sousuo {
-      color: #ccc;
-      font-size: 18px;
-    }
-    input {
-      height: 100%;
-      text-indent: 5px;
-      flex: 1;
-      color: #000;
-    }
-  }
+  .header();
 }
 .content {
   position: absolute;
@@ -126,7 +70,7 @@ body {
       width: 0.6rem;
       text-align: center;
       a {
-        font-size: 0.14rem;
+        font-size: 0.12rem;
         color: #666;
       }
     }
@@ -136,18 +80,21 @@ body {
       position: relative;
       background-color: #fff;
       padding-left: 0.05rem;
+      overflow: hidden;
       .centerContent {
         height: 100%;
-        position: relative;
       }
       ul{
         width: 100%;
         height: 100%;
-        position: absolute;
+        display: flex;
+        flex-direction: column;
+        transform: translate3d(0,-100%,0);
         li {
-          width: 100%;
+          flex-shrink: 0;
           height: 100%;
           overflow:hidden;
+          font-size: 0.12rem;
           text-overflow:ellipsis;
           white-space:nowrap
         }
@@ -157,10 +104,7 @@ body {
           margin-right: 0.02rem;
         }
         a {
-          font-size: 0.12rem;
           color: #3F3F3F;
-          height: 0.3rem;
-          line-height: 0.3rem;
         }
       }
     }
@@ -177,7 +121,6 @@ body {
   }
   .bullet-list {
     width: 100%;
-    margin: 0 auto;
     overflow: hidden;
     ul {
       display: flex;
@@ -206,36 +149,48 @@ body {
       }
     }
   }
+  .seckill {
+    width: 100%;
+    align-items: center;
+    height: 0.3rem;
+    .seckillHeader {
+      width: 100%;
+      height: 0.3rem;
+      line-height: 0.3rem;
+      align-items: center;
+      display: flex;
+      .left {
+        width: 0.8rem;
+        padding-left: 0.06rem;
+        height: 100%;
+        strong {
+          color: #e93b3d;
+          font-size: 0.18rem;
+        }
+      }
+      .center {
+        flex: 1;
+        height: 100%;
+      }
+      .right {
+        width: 0.66rem;
+        height: 100%;
+        span {
+          color: #e93b3d;
+          font-size: 0.12rem;
+        }
+        img {
+          width: 0.1rem;
+          height: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+
+  }
 }
 
 .footer {
-  height: 44px;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  background: #fff;
-  ul {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    li {
-      flex: 1;
-      text-align: center;
-      &.active a{
-        color: #e93b3d;
-      }
-      .iconfont {
-        font-size: 20px;
-      }
-      a {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        font-size: 12px;
-        transform: scale(0.89);
-      }
-    }
-  }
+  .footer();
 }
+

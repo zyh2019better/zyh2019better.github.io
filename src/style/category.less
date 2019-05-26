@@ -1,0 +1,108 @@
+@import (inline) "common/base.css";
+@import (reference)"common/header.less";
+@import (reference)"common/footer.less";
+
+body,html {
+  overflow: hidden;
+}
+
+.header {
+  .header(#666,#ccc);
+  input {
+    background-color: #eee;
+  }
+  .iconfont.icon-sousuo {
+    background-color: #eee;
+  }
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0.44rem;
+  bottom: 0.44rem;
+  display: flex;
+  .aside {
+    height: 100%;
+    width: 1rem;
+    background-color: #eee;
+    overflow-y:scroll;/*让苹果系统滚动不会卡*/
+    -webkit-overflow-scrolling: touch;
+    li {
+      &.active {
+        background-color: #fff;
+        a {
+          color: #f23030;
+        }
+      }
+      height: 0.5rem;
+      text-align: center;
+      line-height: 0.5rem;
+      font-size: 0.14rem;
+      a {
+        display: block;
+      }
+    }
+  }
+  .category-detail {
+    height: 100%;
+    flex: 1;
+    overflow-y:scroll;/*让苹果系统滚动不会卡*/
+    -webkit-overflow-scrolling: touch;
+    .category-list {
+      padding: 0.08rem;
+      h4 {
+        height: 0.4rem;
+        line-height: 0.4rem;
+        font-size: 0.14rem;
+        font-weight: bold;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /*解决一行排两个li导到两个li分两边的情况。*/
+        &::after {
+          content: '';
+          flex: 1;
+          display: inline-block;
+        }
+        li {
+          text-align: center;
+          width: 0.85rem;
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          justify-content: space-around;
+           div {
+             position: relative;
+             width: 0.85rem;
+             height: 0.85rem;
+             overflow: hidden;
+           }
+          img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            height: auto;
+          }
+          p {
+            height: 0.24rem;
+            line-height: 0.24rem;
+            font-size: 0.12rem;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  .footer();
+}

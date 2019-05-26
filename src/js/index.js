@@ -12,11 +12,15 @@ document.addEventListener('DOMContentLoaded',function () {
              }else if(winT == 0){
                  header.style.background = 'transparent'
              }
-
          }
     })()
     new JDSwiper({
-        ele : '.banner-swiper',
-    }).init()
+        ele : '.banner-swiper'
+    });
+    new JDSwiper({
+        ele : '.centerContent',
+        direction : 'Y',
+        points : false
+    });
 },false)
 

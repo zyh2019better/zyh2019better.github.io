@@ -1,0 +1,62 @@
+.header(@color1:#fff,@color2:#ccc){
+  height: 44px;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  line-height: 44px;
+  text-align: center;
+  .left,.right {
+    width: 52px;
+    height: 100%;
+    a {
+      color: @color1;
+      font-size: 16px;
+    }
+    .iconfont {
+      color: @color1;
+      font-size: 22px;
+    }
+  }
+  .center {
+    flex: 1;
+    background-color: #fff;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    .iconfont {
+      padding: 0 6px;
+    }
+    .icon-jingdong {
+      margin-left: 10px;
+      color: #e93b3d;
+      position: relative;
+      font-size: 20px;
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 7px;
+        width: 1px;
+        height: 16px;
+        background-color: #ccc;
+      }
+    }
+    .icon-sousuo {
+      color: @color2;
+      font-size: 18px;
+    }
+    input {
+      height: 100%;
+      text-indent: 5px;
+      flex: 1;
+      color: #000;
+    }
+  }
+}

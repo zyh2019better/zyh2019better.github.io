@@ -78,7 +78,7 @@ function autoplay(){
 }
 autoplay()
 
-function initSlogan(){
+/*function initSlogan(){
     var cloneFirst = sloganSpan[0].cloneNode(true);
     // var cloneLast = sloganSpan[sloganLength-1].cloneNode(true);
     slogan.appendChild(cloneFirst);
@@ -96,7 +96,7 @@ function sloganMove() {
         slogan.style.transition = 'transform 0.5s'
         slogan.style.transform = 'translate3d(0,'+-sloganNumber*100+'%,0)'
     },1)
-}
+}*/
 function pagesPoint() {
     num = (num+pages.length)%pages.length;
     for (var i = 0; i < pages.length ; i++) {

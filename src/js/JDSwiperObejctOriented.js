@@ -136,6 +136,7 @@ function JDSwiper(options) {
             clearInterval(that.timer);
             that.startX = e.changedTouches[0].pageX;
             that.startTime = e.timeStamp;
+            console.log(e.changedTouches[0]);
         });
         this.wrapper.addEventListener('touchmove',function (e) {
             var moveX = e.changedTouches[0].pageX;

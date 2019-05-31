@@ -48,7 +48,7 @@ var timer;
     针对切换bug 给datachange方法加一个参数
     第一次网页刷新是希望处理侧边栏分类详情的数据。当我们单击侧边栏分类详情
     的按钮时我们是不希望处理分类，只希望处理分类详情。*/
-axios.get('/build/tuijian.json')
+axios.get('/build/data/tuijian.json')
     .then(function (res) {
         var data = res.data.data.result[0];
         dataChange(data,true,function () {

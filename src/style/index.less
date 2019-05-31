@@ -15,8 +15,8 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  height: 1000px;
-  background-color: #5B0000;
+  height: 15rem;
+  background-color: #001D39;
   .swiper-container();
   .mall_nav {
     width: 100%;
@@ -45,7 +45,7 @@ body {
   }
   .mainContent {
     width: 98%;
-    height: 400px;
+    height: 3.2rem;
     background-color: #fff;
     border-radius: 0.05rem;
     margin: auto;
@@ -112,6 +112,16 @@ body {
   .ad1 {
     width: 100%;
     margin-top: -0.26rem;
+    position: relative;
+    z-index: 22;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .ad2 {
+    width: 100%;
+    margin-top: -0.1rem;
     position: relative;
     z-index: 22;
     img {
@@ -205,7 +215,6 @@ body {
         display: flex;
         width: auto;
         height: 110%;
-        background: #87ceeb;
         overflow-x:scroll;/*让苹果系统滚动不会卡*/
         -webkit-overflow-scrolling: touch;
         /*&::-webkit-scrollbar {
@@ -239,6 +248,92 @@ body {
           }
         }
       }
+    }
+  }
+  .floor {
+    width: 100%;
+    height: 4rem;
+    .flsPit {
+      width: 100%;
+      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .flsList {
+      width: 94%;
+      margin: 0 auto;
+      display: flex;
+      height: auto;
+      .allList {
+        flex: 1;
+        text-align: center;
+        position: relative;
+        .container {
+          position: absolute;
+          z-index: 5;
+          width: 0.7rem;
+          height: 0.7rem;
+          left: 0.09rem;
+          top: 0.09rem;
+          img {
+            width: 90%;
+            height: auto;
+            border: 1px solid #ccc;
+          }
+        }
+        h3 {
+          position: relative;
+          font-weight: 700;
+          color: #fff;
+          text-align: center;
+          font-size: 0.15rem;
+          bottom: 0.4rem;
+
+        }
+        p {
+          position: relative;
+          font-size: 0.12rem;
+          text-align: center;
+          color: #fff;
+          bottom: 0.4rem;
+        }
+      }
+    }
+  }
+  .footer2 {
+    position: fixed;
+    bottom: 0.44rem;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 0.75rem;
+    display: flex;
+    div {
+      flex: 1;
+      height: 0.75rem;
+      text-align: center;
+      padding: 0.1rem;
+      span {
+        width: 0.36rem;
+        height: 0.36rem;
+        line-height: 0.36rem;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        display: inline-block;
+        color: #999;
+      }
+      p {
+        color: #666;
+        font-size: 0.12rem;
+        text-align: center;
+      }
+    }
+    .iconfont.icon-diannao {
+      color: #999;
+      font-size: 0.18rem;
     }
   }
 }

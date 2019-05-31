@@ -100,7 +100,7 @@ gulp.task('lib',function () {
 *   8.注册一个json任务，可以实现ajax数据交互
 * */
 gulp.task('json',function () {
-    gulp.src(app.appSrc+'dist/data/**/*.json')
+    gulp.src(app.appSrc+'/dist/data/**/*.json')
         .pipe(gulp.dest(app.appBuild+'data'))
         .pipe(gulp.dest(app.appDist+'data'))
         .pipe(connect.reload()) //当内容发生改变时， 重新加载。

@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded',function () {
         for (var i = 0; i < ele.length ; i++) {
             ele[i].innerHTML = arguments[i]>=10?arguments[i]:'0'+arguments[i]
         }
-    })
+    });
 },false)
 //封装倒计时的方法
 function countDown(time,fn) {
@@ -41,7 +41,7 @@ function countDown(time,fn) {
     // console.log(year,month,day);
     time = year+'/'+month+'/'+day+' '+time;//空格
     time = new Date(time)//得到目标时间的事件戳
-    console.log(time);
+    // console.log(time);
     //截止时间和当前时间的差值(时间chuo)
     var delTime = time - date.getTime();
     delTime = delTime/1000//获取差值的 秒数 值

@@ -154,6 +154,8 @@ body {
     align-items: center;
     height: 0.3rem;
     .seckillHeader {
+      background: url("../images/home/seckill/bg.png")no-repeat;
+      background-size: contain;
       width: 100%;
       height: 0.3rem;
       line-height: 0.3rem;
@@ -161,7 +163,7 @@ body {
       display: flex;
       .left {
         width: 0.8rem;
-        padding-left: 0.06rem;
+        padding-left: 0.03rem;
         height: 100%;
         strong {
           color: #e93b3d;
@@ -194,7 +196,50 @@ body {
         }
       }
     }
-
+    .seclillContent {
+      width: 100%;
+      height: 1.2rem;
+      overflow: hidden;
+      margin-top: 0.05rem;
+      .container {
+        display: flex;
+        width: auto;
+        height: 110%;
+        background: #87ceeb;
+        overflow-x:scroll;/*让苹果系统滚动不会卡*/
+        -webkit-overflow-scrolling: touch;
+        /*&::-webkit-scrollbar {
+          display:none
+        }*//*兼容性不好*/
+        div {
+          flex-shrink: 0.05;
+          height: auto;
+          text-align: center;
+          background-color: #fff;
+          margin: 0.06rem 0.06rem 0.2rem;
+        }
+        a {
+          height: 100%;
+          img {
+            width: 60%;
+            height: auto;
+          }
+          span {
+            display: block;
+          }
+          .discount {
+            color: #e93b3d;
+            font-size: 0.16rem;
+            font-weight: bold;
+          }
+          .oldPrice {
+            font-size: 0.12rem;
+            text-decoration: line-through;
+            text-decoration-color: darkred;
+          }
+        }
+      }
+    }
   }
 }
 

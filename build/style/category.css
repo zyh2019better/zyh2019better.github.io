@@ -1,0 +1,251 @@
+@charset "utf-8";
+/* 清零 */
+*:focus{outline: none;}
+html{
+    /*设置响应式字体大小*/
+    font-size: 26.66666667vw;
+    /*禁用iPhone中Safari的字号自动调整*/
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+    /* 解决IOS默认滑动很卡的情况 */
+    -webkit-overflow-scrolling : touch;
+}
+@media (min-width : 540px) {
+    html {
+        font-size: 144px;
+    }
+}
+body{font-family:'Microsoft YaHei', Tahoma,Arial,"Roboto","Droid Sans","Helvetica Neue","Droid Sans Fallback","STHeiti",sans-serif;
+    font-size: 0.12rem;
+}
+/*去除iPhone中默认的input样式*/
+input{-webkit-appearance:none; resize:none;}
+/*取消链接高亮*/
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,select,p,dl,dt,dd,a,img,button,form,table,th,th,tr,th,tbody,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{-webkit-tap-hightlight-color:rgba(0,0,0,0);    -webkit-tap-highlight-color: transparent; margin: 0;padding: 0;border: none; }
+/*设置HTML5元素为块级元素*/
+article,aside,details,figcaption,figure,footer,hgroup,menu,nav,section{display: block;}
+/*图片自适应*/
+img{max-width: 100%;height: auto;width:auto\9; /*IE8*/-ms-interpolation-mode:bicubic; /*为了照顾IE图片缩放失真*/}
+
+
+em,i,strong{font-style: normal;}
+.clearfix:after{content: "";display: block;visibility: hidden;height: 0; clear: both;}
+.clearfix{zoom:1}
+a{text-decoration: none;color: #929292;font-family:'Microsoft YaHei', Tahoma,Arial,"Roboto","Droid Sans","Helvetica Neue","Droid Sans Fallback","STHeiti",sans-serif;}
+a:hover{color: #929292; text-decoration: none;}
+ul,ol,li{list-style: none;}
+h1,h2,h3,h4,h5,h6{font-size: 100%; font-family:'Microsoft YaHei', Tahoma,Arial,"Roboto","Droid Sans","Helvetica Neue","Droid Sans Fallback","STHeiti",sans-serif;}
+fieldset,img{border: none;}
+table{border-collapse: collapse;border-spacing: 0;}
+caption,th{text-align: left;}
+q:before,q:after{content: "";}
+/*禁止表单使用文本框输入法*/
+input:password{ime-mode: disabled;}
+.scope{max-width: 640px;margin: 0 auto;}
+.clear{clear: both;}
+/*连续英文，数字换行*/
+.wordwrap{word-break: break-all;word-wrap: break-word;}
+/*单行文字超出显示省略号*/
+.omg{overflow: hidden;text-overflow:ellipsis ;white-space: nowrap;}
+
+*{box-sizing: border-box;}
+
+/* 禁止长按链接与图片弹出菜单 */
+a, img {-webkit-touch-callout: none;}
+/* 禁止选中文本（如无文本选中需求，此为必选项） */
+html, body {-webkit-user-select: none;user-select: none;}
+
+body,
+html {
+  overflow: hidden;
+}
+.header {
+  height: 44px;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  line-height: 44px;
+  text-align: center;
+}
+.header .left,
+.header .right {
+  width: 52px;
+  height: 100%;
+}
+.header .left a,
+.header .right a {
+  color: #666;
+  font-size: 16px;
+}
+.header .left .iconfont,
+.header .right .iconfont {
+  color: #666;
+  font-size: 22px;
+}
+.header .center {
+  flex: 1;
+  background-color: #fff;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.header .center .iconfont {
+  padding: 0 6px;
+}
+.header .center .icon-jingdong {
+  margin-left: 10px;
+  color: #e93b3d;
+  position: relative;
+  font-size: 20px;
+}
+.header .center .icon-jingdong::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 7px;
+  width: 1px;
+  height: 16px;
+  background-color: #ccc;
+}
+.header .center .icon-sousuo {
+  color: #ccc;
+  font-size: 18px;
+}
+.header .center input {
+  height: 100%;
+  text-indent: 5px;
+  flex: 1;
+  color: #000;
+}
+.header input {
+  background-color: #eee;
+}
+.header .iconfont.icon-sousuo {
+  background-color: #eee;
+}
+.content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0.44rem;
+  bottom: 0.44rem;
+  display: flex;
+}
+.content .aside {
+  height: 100%;
+  width: 1rem;
+  background-color: #eee;
+  overflow-y: scroll;
+  /*让苹果系统滚动不会卡*/
+  -webkit-overflow-scrolling: touch;
+}
+.content .aside li {
+  height: 0.5rem;
+  text-align: center;
+  line-height: 0.5rem;
+  font-size: 0.14rem;
+}
+.content .aside li.active {
+  background-color: #fff;
+}
+.content .aside li.active a {
+  color: #f23030;
+}
+.content .aside li a {
+  display: block;
+}
+.content .category-detail {
+  height: 100%;
+  flex: 1;
+  overflow-y: scroll;
+  /*让苹果系统滚动不会卡*/
+  -webkit-overflow-scrolling: touch;
+}
+.content .category-detail .category-list {
+  padding: 0.08rem;
+}
+.content .category-detail .category-list h4 {
+  height: 0.4rem;
+  line-height: 0.4rem;
+  font-size: 0.14rem;
+  font-weight: bold;
+}
+.content .category-detail .category-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /*解决一行排两个li导到两个li分两边的情况。*/
+}
+.content .category-detail .category-list ul::after {
+  content: '';
+  flex: 1;
+  display: inline-block;
+}
+.content .category-detail .category-list ul li {
+  text-align: center;
+  width: 0.85rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.content .category-detail .category-list ul li div {
+  position: relative;
+  width: 0.85rem;
+  height: 0.85rem;
+  overflow: hidden;
+}
+.content .category-detail .category-list ul li img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+.content .category-detail .category-list ul li p {
+  height: 0.24rem;
+  line-height: 0.24rem;
+  font-size: 0.12rem;
+  white-space: nowrap;
+}
+.footer {
+  height: 44px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+}
+.footer ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.footer ul li {
+  flex: 1;
+  text-align: center;
+}
+.footer ul li.active a {
+  color: #e93b3d;
+}
+.footer ul li .iconfont {
+  font-size: 20px;
+}
+.footer ul li a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px;
+  transform: scale(0.89);
+}
